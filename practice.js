@@ -5,6 +5,7 @@ Number.prototype.minus = function ( num ) {
   return this - num;
 };
 
+
 var number = 100;
 var result1 = number.plus(1000);
 var result2 = number.minus(10);
