@@ -7,6 +7,7 @@
  */
 
 String.prototype.insertDots = function(str, index) {
+    str = str.substring(0, index + 1) + (str.substring(index, str.length)).replace(str.charAt(index), '...');
   // TODO: この変数の中身を作ってください
   return　str;
 };
@@ -22,11 +23,11 @@ function toVoiceInsideYourHeart(phrase) {
     if (phrase.charAt(i) == '。' || phrase.charAt(i) == '，') {
       phrase = phrase.substring(0, i) + (phrase.substring(i, phrase.length)).replace(phrase.charAt(i), '...');
       num = max_num;
-      i += 0; // TODO: 0の代わりに，正しい数値を入れてください
-    } else if (phrase.charAt(i - 1) == '？' || Math.floor(Math.random() * num) < -1) {　// TODO: 条件式の右辺の -1 を自分が最適だと感じる数値に調整してください。
+      i += 2; // TODO: 0の代わりに，正しい数値を入れてください
+    } else if (phrase.charAt(i - 1) == '？' || Math.floor(Math.random() * num) < 2) {　// TODO: 条件式の右辺の -1 を自分が最適だと感じる数値に調整してください。
       phrase = phrase.insertDots(phrase, i);
       num = max_num;
-      i += 0; // TODO: 0の代わりに，正しい数値を入れてください
+      i += 2; // TODO: 0の代わりに，正しい数値を入れてください
     }
     num--;
   }
