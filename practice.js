@@ -2,6 +2,6 @@ Number.prototype.plus = function ( num ) {
   return this + num;
 };
 
-var number = 8;
-var result = number.plus(100);
+var number = 100;
+var result = number.plus(1000);
 console.log(result);
