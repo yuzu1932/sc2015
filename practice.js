@@ -3,5 +3,5 @@ Number.prototype.plus = function ( num ) {
 };
 
 var number = 8;
-var result = number.plus(100/100);
+var result = number.plus(100*100);
 console.log(result);
